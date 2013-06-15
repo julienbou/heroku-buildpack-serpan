@@ -179,7 +179,7 @@ S3_BUCKET="eu-serpan-install"
 
 # s3 packages
 # PHANTOMJS_FILE_NAME="buildpack-phantomjs-${PHANTOMJS_VERSION}.tar.gz"
-PHANTOMJS_FILE_NAME="phantomjs-${PHANTOMJS_VERSION}-linux-x86_64.tar.bz2"
+PHANTOMJS_FILE_NAME="buildpack-phantomjs-${PHANTOMJS_VERSION}.tar.gz"
 BUILDPACK_PHANTOMJS_PACKAGE="http://${S3_BUCKET}.s3.amazonaws.com/${PHANTOMJS_FILE_NAME}"
 
 
