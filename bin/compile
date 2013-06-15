@@ -201,7 +201,7 @@ puts-step "-----> PhantomJS binaries in: $BUILD_DIR/vendor/phantomjs"
 
 
 ### CasperJS
-puts-step "-----> Cloning casperjs"
+
 echo "-----> Cloning casperjs"
 cd $BUILD_DIR/vendor
 git clone https://github.com/n1k0/casperjs.git
