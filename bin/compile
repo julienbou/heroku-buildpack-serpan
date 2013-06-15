@@ -172,12 +172,13 @@ source $BIN_DIR/steps/collectstatic
 ### PhantomJS
 
 # config
-PHANTOMJS_VERSION="1.8.1"
-S3_BUCKET="stomita-buildpack-phantomjs"
+PHANTOMJS_VERSION="1.7.0"
+S3_BUCKET="eu-serpan-install"
 
 
 # s3 packages
-PHANTOMJS_FILE_NAME="buildpack-phantomjs-${PHANTOMJS_VERSION}.tar.gz"
+# PHANTOMJS_FILE_NAME="buildpack-phantomjs-${PHANTOMJS_VERSION}.tar.gz"
+PHANTOMJS_FILE_NAME="phantomjs-${PHANTOMJS_VERSION}-linux-x86_64.tar.bz2"
 BUILDPACK_PHANTOMJS_PACKAGE="http://${S3_BUCKET}.s3.amazonaws.com/${PHANTOMJS_FILE_NAME}"
 
 
@@ -199,10 +200,12 @@ puts-step "-----> PhantomJS binaries in: $BUILD_DIR/vendor/phantomjs"
 
 
 ### CasperJS
+puts-step "-----> Cloning casperjs"
 echo "-----> Cloning casperjs"
 cd $BUILD_DIR/vendor
 git clone https://github.com/n1k0/casperjs.git
-
+cd casperjs
+git checkout 1.0.1
 cd $WORKING_DIR
 
 
