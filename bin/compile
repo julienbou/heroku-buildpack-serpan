@@ -176,6 +176,7 @@ PHANTOMJS_VERSION="1.7.0"
 S3_BUCKET="eu-serpan-install"
 
 
+
 # s3 packages
 # PHANTOMJS_FILE_NAME="buildpack-phantomjs-${PHANTOMJS_VERSION}.tar.gz"
 PHANTOMJS_FILE_NAME="phantomjs-${PHANTOMJS_VERSION}-linux-x86_64.tar.bz2"
@@ -204,7 +205,7 @@ puts-step "-----> Cloning casperjs"
 echo "-----> Cloning casperjs"
 cd $BUILD_DIR/vendor
 git clone https://github.com/n1k0/casperjs.git
-cd casperjs
+cd $BUILD_DIR/vendor/casperjs
 git checkout 1.0.1
 cd $WORKING_DIR
 
